@@ -1,0 +1,79 @@
+# Path-based pull-request labels, applied by
+# .github/workflows/auto-label.yml using actions/labeler.
+#
+# actionlint does not resolve this file; it is read by the labeler action from
+# the base branch. Keep glob patterns relative to the repository root.
+
+tui:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/ui/**"
+          - "src/app/**"
+          - "examples/screenshots.rs"
+          - "docs/screenshots/**"
+
+cli:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/main.rs"
+          - "src/cli.rs"
+
+catalog:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/catalog/**"
+          - "sources/**"
+          - "tests/catalog.rs"
+          - "tests/fixtures/catalogs/**"
+
+source:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/resolver/**"
+          - "tests/resolvers_fixtures.rs"
+          - "tests/fixtures/resolvers/**"
+
+downloads:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/download/**"
+          - "src/verify.rs"
+          - "src/http.rs"
+          - "tests/download_mock.rs"
+          - "tests/verify_mock.rs"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "docs/**"
+          - "sources/schema.md"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - ".githooks/**"
+          - "scripts/**"
+
+packaging:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "install.sh"
+          - "install.ps1"
+          - ".github/workflows/release.yml"
+          - ".github/workflows/binaries.yml"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cargo.toml"
+          - "Cargo.lock"
+          - ".github/dependabot.yml"
+
+release:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "CHANGELOG.md"
+          - ".github/workflows/release.yml"
+          - ".github/workflows/binaries.yml"

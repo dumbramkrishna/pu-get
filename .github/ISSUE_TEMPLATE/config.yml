@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Documentation
+    url: https://github.com/dumbramkrishna/pu-get/blob/main/docs/README.md
+    about: Architecture, development, source guide and release notes.
+  - name: Contributing guide
+    url: https://github.com/dumbramkrishna/pu-get/blob/main/CONTRIBUTING.md
+    about: Setup, source policy, testing and pull-request expectations.
+  - name: Security policy
+    url: https://github.com/dumbramkrishna/pu-get/blob/main/SECURITY.md
+    about: Report vulnerabilities privately; do not open a public issue.

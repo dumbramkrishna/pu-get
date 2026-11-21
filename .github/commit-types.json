@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "header_max": 100,
+  "summary_max": 72,
+  "scope_pattern": "[a-z0-9][a-z0-9._-]*",
+  "forbid_trailing_period": true,
+  "scope_examples": [
+    "browse",
+    "queue",
+    "settings",
+    "splash",
+    "help",
+    "ncert",
+    "cbse",
+    "kseeb",
+    "pue",
+    "catalog",
+    "download",
+    "config",
+    "installer",
+    "labels",
+    "ci"
+  ],
+  "ignore_patterns": [
+    "^Merge ",
+    "^Revert \"",
+    "^fixup! ",
+    "^squash! ",
+    "^amend! ",
+    "^Bump .* from .* to .*$",
+    "^Initial commit$"
+  ],
+  "types": {
+    "add": {
+      "description": "A new user-visible capability or supported resource",
+      "example": "add(ncert): include Class 11 Biology textbooks"
+    },
+    "fix": {
+      "description": "A bug fix",
+      "example": "fix(queue): keep retry ETA stable after reconnect"
+    },
+    "tui": {
+      "description": "Screens, widgets, layout or keyboard interaction",
+      "example": "tui(browse): align the year and latest chips"
+    },
+    "cli": {
+      "description": "Non-interactive commands, flags or output",
+      "example": "cli(list): add a --stream filter"
+    },
+    "source": {
+      "description": "Registry, resolver, crawl or source-policy changes",
+      "example": "source(pue): parse the commerce textbook table"
+    },
+    "catalog": {
+      "description": "Catalog data, filtering, search or generated catalogs",
+      "example": "catalog(filter): prefer the configured language"
+    },
+    "download": {
+      "description": "Download engine, queue, progress, resume or validation",
+      "example": "download(queue): retry 502 responses with backoff"
+    },
+    "docs": {
+      "description": "README, guides, schema or comments",
+      "example": "docs: explain the official-source policy"
+    },
+    "test": {
+      "description": "Tests, fixtures or test tooling",
+      "example": "test(resolvers): add a KSEAB fixture"
+    },
+    "build": {
+      "description": "Build, dependencies, CI, packaging or installers",
+      "example": "build(ci): add commit-message validation"
+    },
+    "chore": {
+      "description": "Maintenance with no behaviour change",
+      "example": "chore: refresh the lockfile"
+    },
+    "refactor": {
+      "description": "Internal restructuring without a behaviour change",
+      "example": "refactor(catalog): split the loader from the filter"
+    },
+    "security": {
+      "description": "Security fixes or hardening",
+      "example": "security(download): constrain redirect hosts"
+    },
+    "release": {
+      "description": "Version bumps, changelog and release preparation",
+      "example": "release: prepare v0.0.1"
+    },
+    "revert": {
+      "description": "Revert an earlier commit",
+      "example": "revert: revert the experimental queue layout"
+    }
+  }
+}

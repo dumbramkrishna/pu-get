@@ -1,0 +1,23 @@
+# Synthetic catalog used by tests. URLs use the reserved example.com domain.
+
+[board]
+id = "ncert"
+name = "NCERT"
+
+[[entries]]
+level = "12"
+subject = "Physics"
+type = "textbook"
+title = "NCERT Physics Part 1 (Class 12)"
+language = "en"
+url = "https://example.com/ncert/leph101.pdf"
+source = "NCERT"
+
+[[entries]]
+level = "1"
+subject = "Mathematics"
+type = "textbook"
+title = "NCERT Math Magic (Class 1)"
+language = "en"
+url = "https://example.com/ncert/math-magic-1.pdf"
+source = "NCERT"

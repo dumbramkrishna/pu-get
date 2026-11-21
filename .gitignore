@@ -1,0 +1,20 @@
+# Build output
+/target/
+/dist/
+**/*.rs.bk
+
+# Local tooling
+.idea/
+.vscode/
+*.swp
+__pycache__/
+*.py[cod]
+
+# Runtime artefacts
+*.part
+crawl-report.txt
+/tmp/
+
+# OS metadata
+.DS_Store
+Thumbs.db

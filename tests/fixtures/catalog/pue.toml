@@ -1,0 +1,49 @@
+# Synthetic catalog used by tests. URLs use the reserved example.com domain.
+
+[board]
+id = "pue"
+name = "Karnataka Pre-University"
+
+[[entries]]
+level = "PUC 1"
+stream = "Science"
+subject = "Physics"
+type = "textbook"
+title = "PUC 1 Physics Textbook Part 1"
+language = "kn"
+year = 2025
+url = "https://example.com/pue/puc1-physics-part1.pdf"
+source = "PUE Karnataka"
+
+[[entries]]
+level = "PUC 1"
+stream = "Arts"
+subject = "History"
+type = "textbook"
+title = "PUC 1 History Textbook"
+language = "kn"
+year = 2025
+url = "https://example.com/pue/puc1-history.pdf"
+source = "PUE Karnataka"
+
+[[entries]]
+level = "PUC 2"
+stream = "Science"
+subject = "Physics"
+type = "textbook"
+title = "PUC 2 Physics Textbook Part 1"
+language = "kn"
+year = 2025
+url = "https://example.com/pue/puc2-physics-part1.pdf"
+source = "PUE Karnataka"
+
+[[entries]]
+level = "PUC 2"
+stream = "Commerce"
+subject = "Accountancy"
+type = "textbook"
+title = "PUC 2 Accountancy Textbook"
+language = "en"
+year = 2025
+url = "https://example.com/pue/puc2-accountancy.pdf"
+source = "PUE Karnataka"

@@ -1,0 +1,109 @@
+name: Source or broken link
+description: Request an official board/source, or report a moved or broken catalog link
+title: "[source]: "
+labels: ["source", "needs-verification", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        pu-get only links to material published by an official board, government
+        body or openly licensed publisher. We do not accept rehosted paid
+        guidebooks, coaching notes, mirrors or login-walled material.
+
+        For a resolver implementation, read
+        [Adding sources](https://github.com/dumbramkrishna/pu-get/blob/main/docs/ADDING_SOURCES.md).
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - New board
+        - More material for an existing board
+        - Broken or moved link
+        - Source should be removed
+    validations:
+      required: true
+
+  - type: input
+    id: board
+    attributes:
+      label: Board or institution
+      placeholder: "Example State Board"
+    validations:
+      required: true
+
+  - type: input
+    id: official_url
+    attributes:
+      label: Official page URL
+      description: The page that publishes the material, not a PDF mirror.
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Who publishes this page?
+      description: Board, government department, public institution or open publisher.
+      placeholder: "Example State Board"
+    validations:
+      required: true
+
+  - type: input
+    id: levels
+    attributes:
+      label: Levels or classes
+      description: For example SSLC, PUC 1, PUC 2, Class 10, Class 12, Classes 1-12.
+      placeholder: "Class 10, Class 12"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: material_types
+    attributes:
+      label: Material types
+      options:
+        - label: Textbooks
+        - label: Model papers
+        - label: Previous year / question papers
+        - label: Sample papers
+        - label: Marking schemes / answer keys
+        - label: Syllabus
+        - label: Other (explain below)
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What is available, and what is broken?
+      description: Include a few example official links and any year/stream/language details.
+      placeholder: |
+        The official page lists ...
+        Year pages exist for ...
+        The catalog entry for ... now returns 404.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: licence
+    attributes:
+      label: Publication basis
+      options:
+        - Published by an official board/government body
+        - Published under an open licence
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is the official page or an openly licensed publisher, not a rehosting site.
+          required: true
+        - label: I am not attaching or requesting paid/copyrighted guidebooks.
+          required: true
+        - label: I have checked that the official page is publicly reachable.
+          required: true

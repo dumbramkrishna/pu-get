@@ -1,0 +1,16 @@
+#!/bin/sh
+# Optional local hook. Enable it with:
+#   git config core.hooksPath .githooks
+#
+# It uses the same dictionary and linter as CI:
+#   .github/commit-types.json and scripts/commit_lint.py
+
+set -eu
+
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "commit-msg hook: python3 is required (or use git commit --no-verify)" >&2
+    exit 1
+fi
+
+repo_root=$(git rev-parse --show-toplevel)
+exec python3 "$repo_root/scripts/commit_lint.py" --message-file "$1"

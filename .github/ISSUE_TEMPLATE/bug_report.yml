@@ -1,0 +1,102 @@
+name: Bug report
+description: Report a reproducible bug in the TUI, CLI, catalogs or downloads
+title: "[bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **Do not use this form for security vulnerabilities.** Follow the
+        [security policy](https://github.com/dumbramkrishna/pu-get/blob/main/SECURITY.md)
+        instead.
+
+        If the problem is a moved/broken official link or a request for a new
+        board, use the **Source or broken link** form.
+
+  - type: input
+    id: version
+    attributes:
+      label: pu-get version
+      description: Output of `pu-get --version`.
+      placeholder: "pu-get 0.0.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: interface
+    attributes:
+      label: Interface
+      options:
+        - TUI
+        - CLI
+        - Both
+        - Catalog/crawl
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and terminal
+      description: OS version, and the terminal emulator/version when using the TUI.
+      placeholder: "Ubuntu 24.04, GNOME Terminal 3.52"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact command or TUI key sequence.
+      placeholder: |
+        1. Run `pu-get`
+        2. Select ...
+        3. Press ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Redact personal paths and private information.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: source_page
+    attributes:
+      label: Official source page (if relevant)
+      description: Link to the board page, not to a rehosted mirror.
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and pull requests.
+          required: true
+        - label: I am reporting a bug, not a security vulnerability.
+          required: true
+        - label: I have redacted personal information from the report.
+          required: true

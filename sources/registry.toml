@@ -1,0 +1,163 @@
+# Curated official sources for pu-get.
+#
+# Rules:
+#   * official boards / government bodies / open-licence publishers only
+#   * never add rehosted paid or copyrighted guidebooks
+#   * never add PDF URLs by hand; resolvers discover them
+#
+# Resolver kinds: ncert | cbse_academic | kseab | pue | generic_index
+# Status:         verified | unverified (unverified sources are skipped by
+#                 default; select them explicitly or pass --include-unverified)
+
+[[source]]
+id = "kseab-sslc-question-papers"
+name = "KSEAB"
+resolver = "kseab"
+board = "kseeb"
+base_url = "https://kseab.karnataka.gov.in/new-page/SSLC%20QUESTION%20PAPERS/en"
+levels = ["SSLC"]
+year_range = [2016, 2026]
+status = "verified"
+max_pages = 40
+
+[[source]]
+id = "kseab-sslc-model-syllabus"
+name = "KSEAB"
+resolver = "generic_index"
+board = "kseeb"
+base_url = "https://kseab.karnataka.gov.in/"
+levels = ["SSLC"]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["model paper", "model question", "syllabus"]
+max_pages = 2
+
+[[source]]
+id = "pue-textbooks"
+name = "PUE Karnataka"
+resolver = "pue"
+board = "pue"
+base_url = "https://pue.karnataka.gov.in/new-page/TEXT%20BOOKS/kn"
+levels = ["PUC 1", "PUC 2"]
+year_range = [2016, 2026]
+status = "verified"
+max_pages = 1
+
+[[source]]
+id = "cbse-sqp"
+name = "CBSE Academic"
+resolver = "cbse_academic"
+board = "cbse"
+base_url = "https://cbseacademic.nic.in/"
+levels = ["10", "12"]
+year_range = [2016, 2026]
+status = "verified"
+max_pages = 1
+
+[[source]]
+id = "ncert-textbooks"
+name = "NCERT"
+resolver = "ncert"
+board = "ncert"
+base_url = "http://ncert.nic.in/textbook.php"
+levels = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+]
+year_range = [2016, 2026]
+status = "verified"
+max_pages = 1
+
+# --- Unverified official sources -------------------------------------------------
+# Kept in the registry so `pu-get crawl --source ...` can confirm them later.
+
+[[source]]
+id = "ktbs-textbooks"
+name = "KTBS"
+resolver = "generic_index"
+board = "kseeb"
+base_url = "https://ktbs.kar.nic.in/"
+levels = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["textbook", "text book", "pdf"]
+max_pages = 2
+
+[[source]]
+id = "dsert-materials"
+name = "DSERT"
+resolver = "generic_index"
+board = "kseeb"
+base_url = "https://dsert.karnataka.gov.in/"
+levels = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["textbook", "syllabus", "question paper", "model paper"]
+max_pages = 2
+
+[[source]]
+id = "nios-materials"
+name = "NIOS"
+resolver = "generic_index"
+board = "nios"
+base_url = "https://www.nios.ac.in/"
+levels = ["10", "12"]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["textbook", "syllabus", "sample paper", "previous year"]
+max_pages = 2
+
+[[source]]
+id = "diksha-materials"
+name = "DIKSHA"
+resolver = "generic_index"
+board = "diksha"
+base_url = "https://diksha.gov.in/"
+levels = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["textbook", "pdf"]
+max_pages = 1
+
+[[source]]
+id = "epathshala-materials"
+name = "e-Pathshala"
+resolver = "generic_index"
+board = "ncert"
+base_url = "https://epathshala.nic.in/"
+levels = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
+]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["textbook", "pdf"]
+max_pages = 1
+
+[[source]]
+id = "swayam-courses"
+name = "SWAYAM"
+resolver = "generic_index"
+board = "swayam"
+base_url = "https://swayam.gov.in/"
+levels = ["Higher Education"]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["syllabus", "pdf"]
+max_pages = 1
+
+[[source]]
+id = "nptel-courses"
+name = "NPTEL"
+resolver = "generic_index"
+board = "nptel"
+base_url = "https://nptel.ac.in/"
+levels = ["Higher Education"]
+year_range = [2016, 2026]
+status = "unverified"
+include_terms = ["syllabus", "pdf"]
+max_pages = 1

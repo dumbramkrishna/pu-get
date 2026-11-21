@@ -1,0 +1,25 @@
+# Synthetic user catalog used by merge/override tests.
+
+[board]
+id = "kseeb"
+name = "Karnataka State Board"
+
+[[entries]]
+level = "SSLC"
+subject = "Mathematics"
+type = "previous_year_paper"
+title = "SSLC Mathematics Previous Year Paper 2025 (corrected)"
+language = "kn"
+year = 2025
+url = "https://example.com/kseeb/sslc-maths-2025.pdf"
+source = "KSEAB"
+
+[[entries]]
+level = "SSLC"
+subject = "Mathematics"
+type = "model_paper"
+title = "SSLC Mathematics Model Paper 2026"
+language = "kn"
+year = 2026
+url = "https://example.com/kseeb/sslc-maths-model-2026.pdf"
+source = "KSEAB"

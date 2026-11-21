@@ -1,0 +1,45 @@
+# Synthetic catalog used by tests. URLs use the reserved example.com domain.
+
+[board]
+id = "cbse"
+name = "CBSE"
+
+[[entries]]
+level = "10"
+subject = "Mathematics"
+type = "sample_paper"
+title = "CBSE Class 10 Mathematics Sample Question Paper 2026-27"
+language = "en"
+year = 2026
+url = "https://example.com/cbse/sqp-class10-maths.pdf"
+source = "CBSE Academic"
+
+[[entries]]
+level = "10"
+subject = "Mathematics"
+type = "marking_scheme"
+title = "CBSE Class 10 Mathematics Marking Scheme 2026-27"
+language = "en"
+year = 2026
+url = "https://example.com/cbse/ms-class10-maths.pdf"
+source = "CBSE Academic"
+
+[[entries]]
+level = "12"
+subject = "Chemistry"
+type = "sample_paper"
+title = "CBSE Class 12 Chemistry Sample Question Paper 2026-27"
+language = "en"
+year = 2026
+url = "https://example.com/cbse/sqp-class12-chemistry.pdf"
+source = "CBSE Academic"
+
+[[entries]]
+level = "12"
+subject = "Chemistry"
+type = "marking_scheme"
+title = "CBSE Class 12 Chemistry Marking Scheme 2026-27"
+language = "en"
+year = 2026
+url = "https://example.com/cbse/ms-class12-chemistry.pdf"
+source = "CBSE Academic"

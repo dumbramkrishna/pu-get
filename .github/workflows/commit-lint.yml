@@ -1,0 +1,60 @@
+name: Commit lint
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commit-lint-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  messages:
+    name: commit messages
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test the commit linter
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+
+      - name: Check the generated type table
+        run: python3 scripts/commit_lint.py --check-docs docs/COMMITS.md
+
+      - name: Check the pull-request title
+        if: github.event_name == 'pull_request'
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: python3 scripts/commit_lint.py --message "$PR_TITLE"
+
+      - name: Check pushed commits
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            revision_range="${PR_BASE}..HEAD"
+          elif printf '%s' "$PUSH_BEFORE" | grep -Eq '^0+$'; then
+            revision_range="HEAD"
+          elif git cat-file -e "${PUSH_BEFORE}^{commit}" 2>/dev/null; then
+            revision_range="${PUSH_BEFORE}..HEAD"
+          else
+            revision_range="HEAD"
+          fi
+          echo "Checking ${revision_range}"
+          python3 scripts/commit_lint.py --range "$revision_range"

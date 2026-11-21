@@ -1,0 +1,47 @@
+# Synthetic catalog used by tests. URLs use the reserved example.com domain.
+
+[board]
+id = "kseeb"
+name = "Karnataka State Board"
+
+[[entries]]
+level = "SSLC"
+subject = "Mathematics"
+type = "previous_year_paper"
+title = "SSLC Mathematics Previous Year Paper 2025"
+language = "kn"
+year = 2025
+url = "https://example.com/kseeb/sslc-maths-2025.pdf"
+source = "KSEAB"
+page = "https://example.com/kseeb/question-papers"
+
+[[entries]]
+level = "SSLC"
+subject = "Mathematics"
+type = "previous_year_paper"
+title = "SSLC Mathematics Previous Year Paper 2024"
+language = "kn"
+year = 2024
+url = "https://example.com/kseeb/sslc-maths-2024.pdf"
+source = "KSEAB"
+page = "https://example.com/kseeb/question-papers"
+
+[[entries]]
+level = "SSLC"
+stream = "General"
+subject = "Science"
+type = "model_paper"
+title = "SSLC Science Model Paper 2025"
+language = "en"
+year = 2025
+url = "https://example.com/kseeb/sslc-science-model-2025.pdf"
+source = "KSEAB"
+
+[[entries]]
+level = "SSLC"
+subject = "Mathematics"
+type = "textbook"
+title = "SSLC Mathematics Textbook"
+language = "kn"
+url = ""
+source = "KTBS"
