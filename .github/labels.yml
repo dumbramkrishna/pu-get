@@ -10,83 +10,83 @@
 #   - .github/workflows/auto-label.yml
 
 - name: bug
-  color: d73a4a
+  color: "d73a4a"
   description: Something is not working as intended
 
 - name: enhancement
-  color: a2eeef
+  color: "a2eeef"
   description: New feature or improvement
 
 - name: documentation
-  color: 0075ca
+  color: "0075ca"
   description: README, guides, schema or other documentation
 
 - name: source
-  color: 5319e7
+  color: "5319e7"
   description: Official source, resolver or catalog-link issue
 
 - name: catalog
-  color: 7057ff
+  color: "7057ff"
   description: Catalog data, filtering, generated catalogs or search
 
 - name: tui
-  color: 1d76db
+  color: "1d76db"
   description: Terminal user interface
 
 - name: cli
-  color: 0e8a16
+  color: "0e8a16"
   description: Non-interactive commands and flags
 
 - name: downloads
-  color: b60205
+  color: "b60205"
   description: Download engine, queue, resume or PDF validation
 
 - name: packaging
-  color: c2e0c6
+  color: "c2e0c6"
   description: Installers, release artifacts or binary packaging
 
 - name: ci
-  color: bfd4f2
+  color: "bfd4f2"
   description: CI, validation or automation workflows
 
 - name: dependencies
-  color: 0366d6
+  color: "0366d6"
   description: Dependency or lockfile updates
 
 - name: release
-  color: f9d0c4
+  color: "f9d0c4"
   description: Release preparation, tags and publishing
 
 - name: security
-  color: b60205
+  color: "b60205"
   description: Security-sensitive; follow SECURITY.md and report privately
 
 - name: needs-triage
-  color: fbca04
+  color: "fbca04"
   description: Needs an initial maintainer review
 
 - name: needs-verification
-  color: fef2c0
+  color: "fef2c0"
   description: Source, link or catalog entry needs to be verified
 
 - name: needs-fixture
-  color: d4c5f9
+  color: "d4c5f9"
   description: Needs a saved HTML fixture or regression test
 
 - name: good first issue
-  color: 7057ff
+  color: "7057ff"
   description: Good entry point for a new contributor
 
 - name: help wanted
-  color: 008672
+  color: "008672"
   description: Extra attention or contribution welcome
 
 - name: question
-  color: d876e3
+  color: "d876e3"
   description: Further information is requested
 
 - name: accessibility
-  color: f143ab
+  color: "f143ab"
   description: Barrier affecting people with disabilities
 
 - name: blocked
@@ -94,13 +94,13 @@
   description: Waiting on an external portal, dependency or decision
 
 - name: duplicate
-  color: cfd3d7
+  color: "cfd3d7"
   description: This issue or pull request already exists
 
 - name: invalid
-  color: e4e669
+  color: "e4e669"
   description: Does not meet the source policy or is not actionable
 
 - name: wontfix
-  color: ffffff
+  color: "ffffff"
   description: This will not be worked on
